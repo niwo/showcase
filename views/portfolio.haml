@@ -21,7 +21,16 @@
           %a.button.prev{:href => "#", :id => key + '-prev', :title => " ← Previous image"} ← Previous image
         %li
           %a.button.next{:href => "#", :id => key + '-next', :title => "Next image →"} Next image →
-      %p.description= project['subtitle']
+      - if project['features']
+        %h4= t.projects.features
+        %ul
+          - project['features'].each do |feature|
+            %li= feature
+      - if project['technologies']
+        %h4= t.projects.technologies
+        %ul
+          - project['technologies'].each do |technology|
+            %li= technology
       - if project['project_url']
         %p.url
           %a{:href => project['project_url']}= project['project_url']

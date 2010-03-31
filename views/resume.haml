@@ -16,7 +16,7 @@
         %span.email= @personal['email'].reverse
     %h3= t.contact.web
     %p
-      %a{:href => @personal['web']}= @personal['web'] 
+      %a{:href => @personal['web']}= @personal['web']
 .span-17.last
   = haml(@resume['file'].to_sym, :layout => false)
   %blockquote.description.right

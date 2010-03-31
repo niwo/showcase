@@ -3,16 +3,17 @@ showcase:
   resume: Resume
   portfolio: Portfolio
   home: Home
-  
 contact:
   address: Address
   birthday: Birthday
   telephone: Telephone
   mail: Mail
   web: Web
-  
 resume:
   updated: Updated
-  
 projects:
   projects: Projects
+  features: Features
+  technologies: Technologies
+  author: Author
+  links: Links

@@ -263,12 +263,14 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 #projects .images li {display:none;}
 #projects .images li.current {display:block;}
 #projects h2 {margin-top:0;margin-bottom:2px;}
-#projects blockquote {margin-left:0;margin-top:0;}
-.button-list {overflow:hidden;margin-left:0;}
+#projects h3.date {margin-bottom:5px;}
+#projects h4 {margin-bottom:5px;}
+#projects blockquote {margin:0;}
+.button-list {overflow:hidden;margin:8px 0 8px 0;}
 .button-list li {list-style-type:none;display:inline;}
-.button {float:left;margin-right:8px;width:23px;height:23px;text-indent:-9999px;overflow:hidden;opacity:.25;filter:alpha(opacity=25);zoom:1;}
-.button:hover {opacity:.5;filter:alpha(opacity=50);}
-.button.inactive {opacity:.1;filter:alpha(opacity=10);}
+.button {float:left;margin:5px;width:23px;height:23px;text-indent:-9999px;overflow:hidden;opacity:0.25;}
+.button:hover {opacity:0.5;}
+.button.inactive {opacity:0.1;}
 .button.next {background:url(/pictures/arrow-right.png) no-repeat;}
 .button.prev {background:url(/pictures/arrow-left.png) no-repeat;}
 .footer hr {margin-top:25px;}
@@ -283,8 +285,7 @@ ul.big-list li.projects {padding:10px;list-style-image:url(/pictures/projects.pn
 .right {text-align:right;}
 
 /* semantic class names */
-#content {float:left;margin-right:10px;width:670px;padding-right:24px;margin-right:25px;border-right:1px solid #eee;}
-div.section, div.entry, .feeds {float:left;margin-right:10px;width:230px;}
+#header-right {}
+#content {float:left;margin-right:10px;width:950px;margin-right:0;}
 #footer, #header {float:left;margin-right:10px;width:950px;margin-right:0;}
-#extra-content {float:left;margin-right:10px;width:230px;}
-div#navigation {width:950px;margin-right:0;}
+#header-left {float:left;margin-right:10px;width:470px;}

@@ -34,16 +34,23 @@
 	margin-bottom: 2px;
 }
 
+#projects h3.date {
+	margin-bottom: 5px;
+}
+
+#projects h4 {
+	margin-bottom: 5px;
+}
+
 #projects blockquote {
-	margin-left: 0;
-	margin-top: 0;
+	margin: 0;
 }
 
 /* Buttons */
 
 .button-list {
 	overflow: hidden;
-	margin-left: 0;
+	margin: 8px 0 8px 0;
 }
 
 .button-list li {
@@ -53,24 +60,20 @@
 
 .button {
 	float: left;
-	margin-right: 8px;
+	margin: 5px;
 	width: 23px;
 	height: 23px;
 	text-indent: -9999px;
 	overflow: hidden;
-	opacity: .25;
-	filter:alpha(opacity=25);
-	zoom: 1;
+	opacity: 0.25;
 }
 
 .button:hover {
-	opacity: .5;
-	filter:alpha(opacity=50);
+	opacity: 0.5;
 }
 
 .button.inactive {
-	opacity: .1;
-	filter:alpha(opacity=10);
+	opacity: 0.1;
 }
 
 .button.next {

@@ -14,21 +14,21 @@ before do
   headers "Content-Type" => "text/html charset=utf8"
 end
 
+PAGES = {'home' => '/', 'resume' => '/resume/', 'portfolio' => '/portfolio/'}
+
 helpers do
   def language_select(page)
-    lang_sel = ""
-    page += '/' if page 
+    lang_sel = ""    
     r18n.available_locales.each do |locale| 
-      lang_sel += r18n.locale.code == locale.code ? locale.title  : "<a href='/#{locale.code}/#{page}'>#{locale.title}</a>"
+      lang_sel += r18n.locale.code == locale.code ? locale.title  : "<a href='/#{locale.code}#{PAGES[page]}'>#{locale.title}</a>"
       lang_sel += " | " unless( locale.code == r18n.available_locales[-1].code)
     end
     lang_sel
   end
   
-  def menu_links(page = 'home')
-    links = {'home' => '/', 'resume' => '/resume/', 'portfolio' => '/portfolio/'}
+  def menu_links(page)
     menu = ""
-    links.each_pair do |name, link|
+    PAGES.each_pair do |name, link|
       menu += (page == name) ? t.showcase.send(name) : "<a href='/#{r18n.locale.code}#{link}'>#{t.showcase.send(name)}</a>"
       menu += " | " unless( link == link[-1])
     end
@@ -52,6 +52,7 @@ helpers do
 end
 
 get '/:locale?/?' do
+  @page = 'home'
   haml :index
 end
  
