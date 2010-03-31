@@ -1,0 +1,30 @@
+%div.span-24.last#projects
+  %h1= t.projects.projects
+  %hr
+  - @projects.each_pair do |key, project|
+    %div.span-17{:id => key + '-images'}
+      %ul.images
+        - if project['images']
+          - (1..project['images'].size).each do |index|
+            - if index == 1
+              %li{:class => 'current'}
+                %img{:src => project['images'][index -1], :alt => project['images'][index -1]}
+            - else
+              %li
+                %img{:src => project['images'][index -1], :alt => project['images'][index -1]}
+    %div.span-7.last
+      %h3.date= project['date']
+      %h2.title= project['name']
+      %blockquote.description= project['subtitle']
+      %ul.button-list
+        %li
+          %a.button.prev{:href => "#", :id => key + '-prev', :title => " ← Previous image"} ← Previous image
+        %li
+          %a.button.next{:href => "#", :id => key + '-next', :title => "Next image →"} Next image →
+      %p.description= project['subtitle']
+      - if project['project_url']
+        %p.url
+          %a{:href => project['project_url']}= project['project_url']
+    -# no hr after the last project in the hash
+    - unless @projects.keys[-1] == key
+      %hr

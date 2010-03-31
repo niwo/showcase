@@ -1,0 +1,25 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf8"}
+    %meta{:description => "resume, portfolio, projects"}
+    %title= @page_title || "Showcase"
+    %link{:rel => "stylesheet", :href => "/css/blueprint/screen.css", :type => "text/css", :media => "screen, projection"}
+    %link{:rel => "stylesheet", :href => "/css/blueprint/print.css", :type => "text/css", :media => "print"}
+    /[if lt IE 8]
+      %link{:rel => "stylesheet", :href => "/css/blueprint/ie.css", :type => "text/css", :media => "screen, projection"}
+  %body
+    .container
+      .span-12
+        %span= "#{t.showcase.language}:  #{language_select(@page)}"
+      .span-12.last.right= menu_links(@page)
+      %hr
+      .content= yield
+      
+      .span-24.last
+        %span.footer
+          %hr
+          %p &copy; 2010 Nik Wolfgramm | Showcase
+          
+    %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
+    %script{:type => "text/javascript", :src => "/javascript/showcase.js"}

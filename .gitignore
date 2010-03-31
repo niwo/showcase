@@ -1,0 +1,7 @@
+.DS_Store
+data/*
+!data/*.example.*
+public/pictures/projects/*
+!public/pictures/projects/*.example.*
+public/pictures/personal/*
+!public/pictures/personal/*.example.*

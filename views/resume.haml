@@ -1,0 +1,24 @@
+.span-6.append-1
+  .contact
+    %img{:src => @personal['image'], :alt => @personal['name']}
+    %h2= @personal['name']
+    %h3= t.contact.address
+    %p= text_with_line_breaks(@personal['address'])
+    %h3= t.contact.birthday
+    %p= l @personal['birthday'], :full
+    %h3= t.contact.telephone
+    %ul
+      %li= @personal['tel']
+      %li= @personal['mobile']
+    %h3= t.contact.mail
+    %p
+      %a{:href => "mailto:#{obscure_email(@personal['email'])}"} 
+        %span.email= @personal['email'].reverse
+    %h3= t.contact.web
+    %p
+      %a{:href => @personal['web']}= @personal['web'] 
+.span-17.last
+  = haml(@resume['file'].to_sym, :layout => false)
+  %blockquote.description.right
+    = "#{t.resume.updated}:"
+    = l @resume['updated']

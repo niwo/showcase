@@ -1,0 +1,19 @@
+showcase:
+  language: Sprachen
+  resume: Resumé
+  portfolio: Portfolio
+  home: Startseite
+  
+contact:
+  address: Adresse
+  birthday: Geburtstag
+  telephone: Telefon
+  mail: Mail
+  web: Web
+  
+resume:
+  updated: Aktualisiert
+  
+projects:
+  projects: Projekte
+  
