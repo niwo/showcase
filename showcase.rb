@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # Showcase Webapplication
 # (C) 2010 Nik Wolfgramm
 
@@ -5,7 +7,7 @@ require 'rubygems'
 require 'sinatra'
 require 'yaml'
 require 'haml'
-require 'unicode'
+require 'maruku'
 require 'sinatra/r18n'
  
 set :haml, {:format => :html5 }
@@ -62,7 +64,8 @@ get '/:locale/resume/?' do
   @personal = YAML.load_file( './data/personal.yml' )
   @language = r18n.locale.code
   @page_title = resumes[@language]['title']
-  @resume = resumes[@language]
+  @resume_data = resumes[@language]
+  @resume = Maruku.new(File.open(@resume_data['file']).read).to_html
   haml :resume
 end
  
