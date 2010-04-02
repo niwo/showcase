@@ -4,6 +4,7 @@
 # (C) 2010 Nik Wolfgramm
 
 require 'rubygems'
+require 'rack/cache'
 require 'sinatra'
 require 'yaml'
 require 'haml'
@@ -11,9 +12,18 @@ require 'maruku'
 require 'sinatra/r18n'
  
 set :haml, {:format => :html5 }
+
+# activate rack-cache in production
+configure :production do
+  use Rack::Cache, 
+    :verbose => true, 
+    :metastore => "file:cache/meta", 
+    :entitystore => "file:cache/body"
+end
  
 before do
   headers "Content-Type" => "text/html charset=utf8"
+  response["Cache-Control"] = "max-age=300, public"
 end
 
 PAGES = {'home' => '/', 'resume' => '/resume/', 'portfolio' => '/portfolio/'}
@@ -30,9 +40,11 @@ helpers do
   
   def menu_links(page)
     menu = ""
+    n = 1
     PAGES.each_pair do |name, link|
       menu += (page == name) ? t.showcase.send(name) : "<a href='/#{r18n.locale.code}#{link}'>#{t.showcase.send(name)}</a>"
-      menu += " | " unless( link == link[-1])
+      menu += " | " unless( PAGES.size == n)
+      n += 1
     end
     menu
   end

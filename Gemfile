@@ -8,6 +8,7 @@ gem 'sinatra'
 gem 'haml'
 gem 'maruku'
 gem 'sinatra-r18n'
+gem 'rack-cache', :group => :production
 
 ## Bundle gems used only in certain environments:
 # gem "rspec", :group => :test
