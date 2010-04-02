@@ -1,4 +1,6 @@
+.bundle
 .DS_Store
+tmp/**/*
 data/*
 !data/*.example.*
 public/pictures/projects/*
