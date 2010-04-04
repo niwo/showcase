@@ -2,6 +2,8 @@
 .DS_Store
 tmp/**/*
 cache/*
+config/deploy.rb
+Capfile
 data/*
 !data/*.example.*
 public/pictures/projects/*

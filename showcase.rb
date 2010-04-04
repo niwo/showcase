@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-# Showcase Webapplication
+# Showcase Portfolio and Resume -Webapplication
 # (C) 2010 Nik Wolfgramm
 
 require 'rubygems'
