@@ -18,7 +18,7 @@
     %p
       %a{:href => @personal['web']}= @personal['web']
 .span-17.last
-  .resume= @resume
+  .resume= find_and_preserve(@resume)
   %blockquote.description.right
     = "#{t.resume.updated}:"
     = l @resume_data['updated']

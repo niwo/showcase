@@ -22,7 +22,7 @@ configure :production do
 end
  
 before do
-  headers "Content-Type" => "text/html charset=utf8"
+  headers "Content-Type" => "text/html; charset=utf-8"
   response["Cache-Control"] = "max-age=300, public"
 end
 
@@ -77,7 +77,7 @@ get '/:locale/resume/?' do
   @language = r18n.locale.code
   @page_title = resumes[@language]['title']
   @resume_data = resumes[@language]
-  @resume = Maruku.new(File.open(@resume_data['file']).read).to_html
+  @resume = Maruku.new(File.open(@resume_data['file']).read).to_html.gsub(/^\s*\n/, "")
   haml :resume
 end
  
