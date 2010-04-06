@@ -28,12 +28,16 @@ Add your personal picture under __public/pictures/personal/__ and projetcs pictu
 
 
 ## Installation ##
-clone the showcase git project:
+### clone the showcase git project ###
+
 `git clone git://github.com/niwo/showcase.git`
 
-install the dependencies with bundler:
+### install the dependencies with bundler ###
+
 `cd showcase`
+
 `bundle install`
 
-finally let's start the show:
+### finally let's start the show ###
+
 `ruby showcase.rb`
