@@ -12,3 +12,28 @@ Copyright © 2010, Nik Wolfgramm
 - edit your resume using markdown
 - page caching in production
 
+## Fill in data ##
+
+### Personal ###
+Edit the file __data/personal.yml__
+
+### Resume ###
+Edit the file __data/resumes.yml__ and add a markdown file for the resume in your language(s), i.e. __data/resume.en.md__
+
+### Projects ###
+Edit the file __data/projects.yml__
+
+### Pictures ###
+Add your personal picture under __public/pictures/personal/__ and projetcs pictures under __public/pictures/projects/__
+
+
+## Installation ##
+clone the showcase git project:
+‘git clone git://github.com/niwo/showcase.git‘
+
+install the dependencies with bundler:
+‘cd showcase‘
+‘bundle install‘
+
+finally let's start the show:
+‘ruby showcase.rb‘
