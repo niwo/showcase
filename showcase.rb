@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-# Showcase Portfolio and Resume -Webapplication
+# Showcase: a portfolio and resume web application based on Sinatra
 # (C) 2010 Nik Wolfgramm
 
 require 'rubygems'
@@ -8,7 +8,7 @@ require 'rack/cache'
 require 'sinatra'
 require 'yaml'
 require 'haml'
-require 'maruku'
+require 'rdiscount'
 require 'sinatra/r18n'
  
 set :haml, {:format => :html5 }
@@ -77,7 +77,7 @@ get '/:locale/resume/?' do
   @language = r18n.locale.code
   @page_title = resumes[@language]['title']
   @resume_data = resumes[@language]
-  @resume = Maruku.new(File.open(@resume_data['file']).read).to_html.gsub(/^\s*\n/, "")
+  @resume = RDiscount.new(File.open(@resume_data['file']).read).to_html
   haml :resume
 end
  

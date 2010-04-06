@@ -6,7 +6,7 @@ source 'http://gemcutter.org'
 ## Used in production:
 gem 'sinatra'
 gem 'haml'
-gem 'maruku'
+gem 'rdiscount'
 gem 'sinatra-r18n'
 gem 'rack-cache', :group => :production
 
