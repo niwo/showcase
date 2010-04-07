@@ -6,7 +6,7 @@ config/deploy.rb
 Capfile
 data/*
 !data/*.example.*
-public/pictures/projects/*
-!public/pictures/projects/*.example.*
-public/pictures/personal/*
-!public/pictures/personal/*.example.*
+public/images/projects/*
+!public/images/projects/*.example.*
+public/images/personal/*
+!public/images/personal/*.example.*
