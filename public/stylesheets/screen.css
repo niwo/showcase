@@ -274,13 +274,13 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 .button {float:left;margin:5px;width:23px;height:23px;text-indent:-9999px;overflow:hidden;opacity:0.25;}
 .button:hover {opacity:0.5;}
 .button.inactive {opacity:0.1;}
-.button.next {background:url(/pictures/arrow-right.png) no-repeat;}
-.button.prev {background:url(/pictures/arrow-left.png) no-repeat;}
+.button.next {background:url(/images/arrow-right.png) no-repeat;}
+.button.prev {background:url(/images/arrow-left.png) no-repeat;}
 .footer hr {margin-top:25px;}
 .footer p {color:#888888;font-size:90%;margin-top:-15px;text-align:center;}
 ul.big-list {margin:10% 0 15% 20%;line-height:1.5;}
-ul.big-list li.resume {padding:10px;list-style-image:url(/pictures/resume.png);background-position:0;}
-ul.big-list li.projects {padding:10px;list-style-image:url(/pictures/projects.png);background-position:3px 10px;}
+ul.big-list li.resume {padding:10px;list-style-image:url(/images/resume.png);background-position:0;}
+ul.big-list li.projects {padding:10px;list-style-image:url(/images/projects.png);background-position:3px 10px;}
 .contact h3 {margin-bottom:10px;}
 .contact img {width:140px;height:180px;margin:0 0 10px 0;}
 .contact ul {list-style-type:none;margin-left:0;padding-left:0;}

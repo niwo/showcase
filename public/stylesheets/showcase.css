@@ -94,11 +94,11 @@
 }
 
 .button.next {
-	background: url(/pictures/arrow-right.png) no-repeat;
+	background: url(/images/arrow-right.png) no-repeat;
 }
 
 .button.prev {
-	background: url(/pictures/arrow-left.png) no-repeat;
+	background: url(/images/arrow-left.png) no-repeat;
 }
 
 /* Footer */
@@ -123,13 +123,13 @@ ul.big-list{
 
 ul.big-list li.resume {
 	padding: 10px;
-	list-style-image: url(/pictures/resume.png);
+	list-style-image: url(/images/resume.png);
 	background-position: 0;
 }
 
 ul.big-list li.projects {
 	padding: 10px;
-	list-style-image: url(/pictures/projects.png);
+	list-style-image: url(/images/projects.png);
 	background-position: 3px 10px;
 }
 
