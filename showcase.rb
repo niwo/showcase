@@ -4,8 +4,8 @@
 # (C) 2010 Nik Wolfgramm
 
 require 'rubygems'
-require 'rack/cache'
 require 'sinatra'
+require 'rack/cache'
 require 'yaml'
 require 'haml'
 require 'rdiscount'
