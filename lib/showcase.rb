@@ -57,8 +57,8 @@ module Showcase
     def load_projects
       projects = YAML.load_file(@config.projects_data)
       projects.each do |key, project|
-        id = {:id => key}
-        @projects << OpenStruct.new(project.merge(id))
+        project_key = {:key => key}
+        @projects << OpenStruct.new(project.merge(project_key))
       end
     end
   
