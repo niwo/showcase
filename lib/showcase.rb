@@ -1,8 +1,9 @@
 require 'yaml'
 require 'ostruct'
 
-require './lib/showcase/models'
-require './lib/showcase/config'
+# require local showcase dependencies
+require File.join(File.expand_path(File.dirname(__FILE__)), "showcase", "models")
+require File.join(File.expand_path(File.dirname(__FILE__)), "showcase", "config")
 
 module Showcase
   VERSION = '0.2'
