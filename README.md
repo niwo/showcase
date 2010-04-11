@@ -12,6 +12,24 @@ Copyright © 2010, Nik Wolfgramm
 - edit your resume using markdown
 - page caching in production
 
+## Installation ##
+### clone the showcase git project ###
+
+`git clone git://github.com/niwo/showcase.git`
+
+### install the dependencies with bundler ###
+
+`cd showcase`
+
+`bundle install`
+
+### copy the sample config file ###
+`cp config.example.yml config.yml`
+
+### finally let's start the show ###
+
+`ruby showcase.rb`
+
 ## Fill in data ##
 
 ### Personal ###
@@ -25,19 +43,3 @@ Edit the file __data/projects.yml__
 
 ### Pictures ###
 Add your personal picture under __public/pictures/personal/__ and projetcs pictures under __public/pictures/projects/__
-
-
-## Installation ##
-### clone the showcase git project ###
-
-`git clone git://github.com/niwo/showcase.git`
-
-### install the dependencies with bundler ###
-
-`cd showcase`
-
-`bundle install`
-
-### finally let's start the show ###
-
-`ruby showcase.rb`

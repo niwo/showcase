@@ -5,13 +5,16 @@
 
 require 'rubygems'
 require 'sinatra'
-require 'rack/cache'
-require 'yaml'
-require 'haml'
-require 'rdiscount'
 require 'sinatra/r18n'
+require 'rack/cache'
+require 'haml'
+require './lib/showcase'
  
+# set haml fromat to html5
 set :haml, {:format => :html5 }
+
+# load Showcase application settings and data
+SC = Showcase::Application.new
 
 # activate rack-cache in production
 configure :production do
@@ -26,25 +29,23 @@ before do
   response["Cache-Control"] = "max-age=300, public"
 end
 
-PAGES = {'home' => '/', 'resume' => '/resume/', 'portfolio' => '/portfolio/'}
-
-helpers do
-  def language_select(page)
+helpers do  
+  def language_select(page_name)
     lang_sel = ""    
-    r18n.available_locales.each do |locale| 
-      lang_sel += r18n.locale.code == locale.code ? locale.title  : "<a href='/#{locale.code}#{PAGES[page]}'>#{locale.title}</a>"
-      lang_sel += " | " unless( locale.code == r18n.available_locales[-1].code)
+    r18n.available_locales.each do |locale|
+      if SC.config.languages.include? locale.code
+        lang_sel += r18n.locale.code == locale.code ? locale.title  : "<a href='/#{locale.code}#{SC.page(page_name).path}'>#{locale.title}</a>"
+        lang_sel += " | " unless( locale.code == r18n.available_locales.last.code)
+      end
     end
     lang_sel
   end
   
-  def menu_links(page)
+  def menu_links(page_name)
     menu = ""
-    n = 1
-    PAGES.each_pair do |name, link|
-      menu += (page == name) ? t.showcase.send(name) : "<a href='/#{r18n.locale.code}#{link}'>#{t.showcase.send(name)}</a>"
-      menu += " | " unless( PAGES.size == n)
-      n += 1
+    SC.pages.each do |page|
+      menu += page.name == page_name ? t.showcase.send(page.name) : "<a href='/#{r18n.locale.code}#{page.path}'>#{t.showcase.send(page.name)}</a>"
+      menu += " | " unless(page == SC.pages.last)
     end
     menu
   end
@@ -67,23 +68,22 @@ end
 
 get '/:locale?/?' do
   @page = 'home'
+  @page_title = "Showcase #{t.showcase.home}"
   haml :index
 end
  
 get '/:locale/resume/?' do
   @page = 'resume'
-  resumes = YAML.load_file( './data/resumes.yml' )
-  @personal = YAML.load_file( './data/personal.yml' )
+  @me = SC.me
   @language = r18n.locale.code
-  @page_title = resumes[@language]['title']
-  @resume_data = resumes[@language]
-  @resume = RDiscount.new(File.open(@resume_data['file']).read).to_html
+  @resume = SC.resume(@language)
+  @page_title = @resume.title
   haml :resume
 end
  
 get '/:locale/portfolio/?' do
   @page = 'portfolio'
-  @page_title = "Project Portfolio"
-  @projects = YAML.load_file( './data/projects.yml' )
+  @page_title = t.showcase.portfolio
+  @projects = SC.projects
   haml :portfolio
 end

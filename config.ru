@@ -1,2 +1,2 @@
-require 'showcase'
+require 'application'
 run Sinatra::Application

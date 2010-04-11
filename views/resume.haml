@@ -1,24 +1,24 @@
 .span-6.append-1
   .contact
-    %img{:src => @personal['image'], :alt => @personal['name']}
-    %h2= @personal['name']
+    %img{:src => @me.image, :alt => @me.name, :title => "#{@me.name}, #{@me.title}"}
+    %h2= @me.name
     %h3= t.contact.address
-    %p= text_with_line_breaks(@personal['address'])
+    %p= text_with_line_breaks(@me.address)
     %h3= t.contact.birthday
-    %p= l @personal['birthday'], :full
+    %p= l @me.birthday, :full
     %h3= t.contact.telephone
     %ul
-      %li= @personal['tel']
-      %li= @personal['mobile']
+      %li= @me.tel
+      %li= @me.mobile
     %h3= t.contact.mail
     %p
-      %a{:href => "mailto:#{obscure_email(@personal['email'])}"} 
-        %span.email= @personal['email'].reverse
+      %a{:href => "mailto:#{obscure_email(@me.email)}"} 
+        %span.email= @me.email.reverse
     %h3= t.contact.web
     %p
-      %a{:href => @personal['web']}= @personal['web']
+      %a{:href => @me.web}= @me.web
 .span-17.last
-  .resume= find_and_preserve(@resume)
+  .resume= @resume.content
   %blockquote.description.right
     = "#{t.resume.updated}:"
-    = l @resume_data['updated']
+    = l @resume.updated_at

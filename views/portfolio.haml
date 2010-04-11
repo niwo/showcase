@@ -1,39 +1,39 @@
 %div.span-24.last#projects
   %h1= t.projects.projects
   %hr
-  - @projects.each_pair do |key, project|
-    %div.span-17{:id => key + '-images'}
+  - @projects.each do |project|
+    %div.span-17{:id => project.id + '-images'}
       %ul.images
-        - if project['images']
-          - (1..project['images'].size).each do |index|
-            - if index == 1
+        - if project.images
+          - project.images.each do |image|
+            - if project.images.index(image) == 0
               %li{:class => 'current'}
-                %img{:src => project['images'][index -1], :alt => project['images'][index -1]}
+                %img{:src => image, :alt => image}
             - else
               %li
-                %img{:src => project['images'][index -1], :alt => project['images'][index -1]}
+                %img{:src => image, :alt => image}
     %div.span-7.last
-      %h3.date= project['date']
-      %h2.title= project['name']
-      %blockquote.description= project['subtitle']
+      %h3.date= project.date
+      %h2.title= project.name
+      %blockquote.description= project.subtitle
       %ul.button-list
         %li
-          %a.button.prev{:href => "#", :id => key + '-prev', :title => " ← Previous image"} ← Previous image
+          %a.button.prev{:href => "#", :id => project.id + '-prev', :title => " ← Previous image"} ← Previous image
         %li
-          %a.button.next{:href => "#", :id => key + '-next', :title => "Next image →"} Next image →
-      - if project['features']
+          %a.button.next{:href => "#", :id => project.id + '-next', :title => "Next image →"} Next image →
+      - if project.features
         %h4= t.projects.features
         %ul
-          - project['features'].each do |feature|
+          - project.features.each do |feature|
             %li= feature
-      - if project['technologies']
+      - if project.technologies
         %h4= t.projects.technologies
         %ul
-          - project['technologies'].each do |technology|
+          - project.technologies.each do |technology|
             %li= technology
-      - if project['project_url']
+      - if project.project_url
         %p.url
-          %a{:href => project['project_url']}= project['project_url']
+          %a{:href => project.project_url}= project.project_url
     -# no hr after the last project in the hash
-    - unless @projects.keys[-1] == key
+    - unless project == @projects.last
       %hr

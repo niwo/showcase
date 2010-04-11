@@ -3,6 +3,7 @@
 tmp/**/*
 cache/*
 config/deploy.rb
+config/config.yml
 Capfile
 data/*
 !data/*.example.*
