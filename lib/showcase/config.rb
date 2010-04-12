@@ -33,9 +33,8 @@ module Showcase
     end
     
     def google_analytics_code
-      if @config["google_analytics_code"] && @config["google_analytics_code"].length > 3
-        return @config["google_analytics_code"]
-      end
+      code = @config["google_analytics_code"]
+      return code if code && code.length > 3
     end
   
     private

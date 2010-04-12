@@ -31,7 +31,9 @@ module Showcase
     end
     
     def pages
-      @pages ||= [Page.new('home', '/'), Page.new('resume'), Page.new('portfolio')]
+      @pages ||= [Page.new('home', '/'),
+                  Page.new('resume'),
+                  Page.new('portfolio')]
     end
     
     def page(name)
@@ -47,11 +49,12 @@ module Showcase
     end
   
     def load_resumes
-      resumes = YAML.load_file(@config.resumes_data) || {}
+      resumes = YAML.load_file(@config.resumes_data)
       resumes.each do |lang, resume|
         @resumes[lang] = Resume.new(lang, resume['file'],
           {:updated_at => resume['updated_at'], :title => resume['title']})
       end
+      @resumes
     end
   
     def load_projects
@@ -60,6 +63,7 @@ module Showcase
         project_key = {:key => key}
         @projects << OpenStruct.new(project.merge(project_key))
       end
+      @projects.sort! {|p1, p2| p2.date.to_i <=> p1.date.to_i }
     end
   
     def load_personal
