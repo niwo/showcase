@@ -12,9 +12,9 @@
   %body
     .container
       #header
-        #header-left
+        #navigation-left
           %span= "#{t.showcase.language}:  #{language_select(@page)}"
-        #header-right.right= menu_links(@page)
+        #navigation-right.right= menu_links(@page)
         %hr
 
       #content= yield

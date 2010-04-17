@@ -157,8 +157,17 @@ ul.big-list li.projects {
 	text-align: left;
 }
 
+
+/* Navigation */
+#navigation-left a:hover, #navigation-right a:hover{
+	background-color: #FFFF99;
+}
+
 /* General */
 
 .right {
 	text-align: right;
 }
+
+
+

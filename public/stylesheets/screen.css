@@ -285,10 +285,11 @@ ul.big-list li.projects {padding:10px;list-style-image:url(/images/projects.png)
 .contact img {width:140px;height:180px;margin:0 0 10px 0;}
 .contact ul {list-style-type:none;margin-left:0;padding-left:0;}
 .contact .email {direction:rtl;unicode-bidi:bidi-override;text-align:left;}
+#navigation-left a:hover, #navigation-right a:hover {background-color:#FFFF99;}
 .right {text-align:right;}
 
 /* semantic class names */
-#header-right {}
 #content {float:left;margin-right:10px;width:950px;margin-right:0;}
 #footer, #header {float:left;margin-right:10px;width:950px;margin-right:0;}
-#header-left {float:left;margin-right:10px;width:470px;}
+#navigation-right {}
+#navigation-left {float:left;margin-right:10px;width:470px;}
