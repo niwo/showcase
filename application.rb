@@ -68,6 +68,7 @@ end
 
 get '/:locale?/?' do
   @page = 'home'
+  @me = SC.me
   @page_title = "Showcase #{t.showcase.home}"
   haml :index
 end

@@ -1,0 +1,23 @@
+.contact
+  %img.me{:src => @me.image, :alt => @me.name, :title => "#{@me.name}, #{@me.title}"}
+  %h2= @me.name
+  %h3= t.contact.address
+  %p= text_with_line_breaks(@me.address)
+  %h3= t.contact.birthday
+  %p= l @me.birthday, :full
+  %h3= t.contact.telephone
+  %p
+    = @me.tel
+    %br
+    = @me.mobile
+  %h3= t.contact.mail
+  %p
+    %a{:href => "mailto:#{obscure_email(@me.email)}"} 
+      %span.email= @me.email.reverse
+  - if @me.web
+    %h3= t.contact.web
+    %p
+      %a{:href => @me.web}= @me.web
+  - if @me.linkedin
+    %a{:href => @me.linkedin}
+      %img.linkedin{:src => '/images/linkedin.png',  :alt => 'View my profile on LinkedIn', :width => '120', :height => '33p'}

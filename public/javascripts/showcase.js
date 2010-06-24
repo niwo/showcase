@@ -15,6 +15,7 @@ function imageSwitch(obj, direction) {
   next.addClass('current');
 }
 
+/*
 $(document).ready(function() {
   $(".button-list .next").click(function() {
     imageSwitch($(this), "next");
@@ -24,4 +25,15 @@ $(document).ready(function() {
     imageSwitch($(this), "prev");
     return false;
   });
+});
+*/
+
+$(window).ready(function() {
+	$("[id$='-images']").nivoSlider({
+				slices:10,
+		    effect:'fade',
+				startSlide:0,
+				manualAdvance:true
+	    }
+		);
 });

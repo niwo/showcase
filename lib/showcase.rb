@@ -6,7 +6,7 @@ require File.join(File.expand_path(File.dirname(__FILE__)), "showcase", "models"
 require File.join(File.expand_path(File.dirname(__FILE__)), "showcase", "config")
 
 module Showcase
-  VERSION = '0.2'
+  VERSION = '0.3'
   
   class Application
     attr_reader :config
@@ -26,7 +26,7 @@ module Showcase
       @projects
     end
   
-    def me
+    def me(short = false)
       @me
     end
     

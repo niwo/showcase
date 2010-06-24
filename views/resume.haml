@@ -1,22 +1,5 @@
 .span-6.append-1
-  .contact
-    %img{:src => @me.image, :alt => @me.name, :title => "#{@me.name}, #{@me.title}"}
-    %h2= @me.name
-    %h3= t.contact.address
-    %p= text_with_line_breaks(@me.address)
-    %h3= t.contact.birthday
-    %p= l @me.birthday, :full
-    %h3= t.contact.telephone
-    %ul
-      %li= @me.tel
-      %li= @me.mobile
-    %h3= t.contact.mail
-    %p
-      %a{:href => "mailto:#{obscure_email(@me.email)}"} 
-        %span.email= @me.email.reverse
-    %h3= t.contact.web
-    %p
-      %a{:href => @me.web}= @me.web
+  = haml :_contact, :layout => false
 .span-17.last
   .resume= @resume.content
   %blockquote.description.right

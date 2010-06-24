@@ -2,25 +2,14 @@
   %h1= t.projects.projects
   %hr
   - @projects.each do |project|
-    %div.span-17{:id => project.key + '-images'}
-      %ul.images
-        - if project.images
-          - project.images.each do |image|
-            - if project.images.index(image) == 0
-              %li{:class => 'current'}
-                %img{:src => image, :alt => image}
-            - else
-              %li
-                %img{:src => image, :alt => image}
+    %div.span-17.images{:id => project.key + '-images'}
+      - if project.images
+        - project.images.each do |image|
+          %img{:src => image, :alt => image}
     %div.span-7.last
       %h3.date= project.date
       %h2.title= project.name
       %blockquote.description= project.subtitle
-      %ul.button-list
-        %li
-          %a.button.prev{:href => "#", :id => project.key + '-prev', :title => " ← Previous image"} ← Previous image
-        %li
-          %a.button.next{:href => "#", :id => project.key + '-next', :title => "Next image →"} Next image →
       - if project.features
         %h4= t.projects.features
         %ul

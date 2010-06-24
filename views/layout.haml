@@ -27,6 +27,7 @@
           v.#{Showcase::VERSION}
           
     %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
+    %script{:type => "text/javascript", :src => "/javascripts/jquery.nivo.slider.pack.js"}
     %script{:type => "text/javascript", :src => "/javascripts/showcase.js"}
     - if SC.config.google_analytics_code
-      = haml :analytics, :layout => false
+      = haml :_analytics, :layout => false
