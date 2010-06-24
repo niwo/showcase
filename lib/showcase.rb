@@ -26,7 +26,7 @@ module Showcase
       @projects
     end
   
-    def me(short = false)
+    def me
       @me
     end
     
