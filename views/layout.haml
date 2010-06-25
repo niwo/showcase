@@ -11,11 +11,15 @@
       %link{:rel => "stylesheet", :href => "/stylesheets/ie.css", :type => "text/css", :media => "screen, projection"}
   %body
     .container
-      #header
-        #navigation-left
-          %span= "#{t.showcase.language}:  #{language_select(@page)}"
-        #navigation-right.right= menu_links(@page)
-        %hr
+      #header.last
+        #lang
+          %span= "#{t.showcase.language}: #{language_select(@page)}"
+        #nav
+          %ul
+            - menu_links(@page).each do |item|
+              %li= item
+      
+      %br
 
       #content= yield
       

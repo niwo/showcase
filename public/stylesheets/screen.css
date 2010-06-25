@@ -278,8 +278,13 @@ ul.big-list li.projects {padding:10px;list-style-image:url(/images/projects.png)
 .contact img .me {width:140px;height:180px;margin:0 0 10px 0;}
 .contact .email {direction:rtl;unicode-bidi:bidi-override;text-align:left;}
 .contact p {margin-left:5px;}
-#navigation-left a:hover, #navigation-right a:hover {background-color:#FFFF99;}
-#navigation-left {float:left;}
+#header {margin-bottom:20px;}
+#nav ul {float:right;list-style:none;display:block;}
+#nav ul li {font-size:1.2em;float:left;padding:8px;}
+#nav, #nav a {color:#635E57;padding-bottom:2px;text-decoration:none;text-transform:uppercase;}
+#nav .current, #nav ul li a:hover {border-bottom:1px solid #B7B2AB;}
+#lang a:hover {background-color:#FFFF99;}
+#lang {color:#635E57;float:left;margin-top:8px;}
 .right {text-align:right;}
 
 /* nivo-slider.css */

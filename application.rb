@@ -34,7 +34,7 @@ helpers do
     lang_sel = ""    
     r18n.available_locales.each do |locale|
       if SC.config.languages.include? locale.code
-        lang_sel += r18n.locale.code == locale.code ? locale.title  : "<a href='/#{locale.code}#{SC.page(page_name).path}'>#{locale.title}</a>"
+        lang_sel += r18n.locale.code == locale.code ? locale.title : "<a href='/#{locale.code}#{SC.page(page_name).path}'>#{locale.title}</a>"
         lang_sel += " | " unless( locale.code == r18n.available_locales.last.code)
       end
     end
@@ -42,10 +42,9 @@ helpers do
   end
   
   def menu_links(page_name)
-    menu = ""
+    menu = []
     SC.pages.each do |page|
-      menu += page.name == page_name ? t.showcase.send(page.name) : "<a href='/#{r18n.locale.code}#{page.path}'>#{t.showcase.send(page.name)}</a>"
-      menu += " | " unless(page == SC.pages.last)
+      menu << (page.name == page_name ? "<span class='current'>#{t.showcase.send(page.name)}</span>" : "<a href='/#{r18n.locale.code}#{page.path}'>#{t.showcase.send(page.name)}</a>")
     end
     menu
   end
