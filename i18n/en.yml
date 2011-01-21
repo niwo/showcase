@@ -9,6 +9,7 @@ contact:
   telephone: Telephone
   mail: Mail
   web: Web
+  vcf: download my vcard
 resume:
   updated: Updated
 projects:
@@ -17,3 +18,5 @@ projects:
   technologies: Technologies
   author: Author
   links: Links
+format:
+  short: "%B %Y"

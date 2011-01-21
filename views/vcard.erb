@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:<%= @me.last_name %>;<%= @me.first_name %>
+FN:<%= @me.last_name %> <%= @me.first_name %>
+TITLE:<%= @me.title %>
+TEL;TYPE=HOME,VOICE:<%= @me.phone %>
+TEL;TYPE=HOME,VOICE:<%= @me.mobile %>
+ADR;TYPE=HOME:<%= @me.address %>
+EMAIL;TYPE=PREF,INTERNET:<%= @me.email %>
+REV:20080424T195243Z
+END:VCARD

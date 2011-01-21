@@ -9,6 +9,7 @@ contact:
   telephone: Telefon
   mail: Mail
   web: Web
+  vcf: vcard herunterladen
 resume:
   updated: Aktualisiert
 projects:
@@ -17,4 +18,3 @@ projects:
   technologies: Technologien
   author: Autor
   links: Links
-  

@@ -65,11 +65,19 @@ helpers do
   end
 end
 
-get '/:locale?/?' do
-  @page = 'home'
+get '/vcard.vcf' do
+  content_type :vcf
   @me = SC.me
-  @page_title = "Showcase #{t.showcase.home}"
-  haml :index
+  erb :vcard
+end
+
+['/', '/:locale/?'].each do |path|
+  get path do
+    @page = 'home'
+    @me = SC.me
+    @page_title = "Showcase #{t.showcase.home}"
+    haml :index
+  end
 end
  
 get '/:locale/resume/?' do

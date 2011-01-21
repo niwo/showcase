@@ -4,4 +4,4 @@
   .resume= @resume.content
   %blockquote.description.right
     = "#{t.resume.updated}:"
-    = l @resume.updated_at
+    = l @resume.updated, '%B %Y'

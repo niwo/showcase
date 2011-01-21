@@ -5,12 +5,12 @@ module Showcase
     attr_reader :lang
     attr_reader :file
     attr_reader :title
-    attr_reader :updated_at
+    attr_reader :updated
   
     def initialize(lang, file, opts = {})
       @lang = lang 
       @file = file || "/data/resume.#{lang}.md"
-      @updated_at = opts[:updated_at] || Time.now
+      @updated = opts[:updated] || Time.now
       @title = opts[:title] || nil
     end
   

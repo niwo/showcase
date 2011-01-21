@@ -3,15 +3,15 @@
  * with the main download before including this file.
  */
 
-.nivoSlider {
+.images {
 	position:relative;
 	margin:30px 0px 60px 0px;
-	background:#202834 url(/images/nivo-slider/loading.gif) no-repeat 50% 50%;
+	background:url(/images/nivo-slider/loading.gif) no-repeat 50% 50%;
 	-moz-box-shadow:0px 0px 0px #333;
 	-webkit-box-shadow:0px 0px 0px #333;
 	box-shadow:0px 0px 0px #333;
 }
-.nivoSlider img {
+.images img {
 	position:absolute;
 	top:0px;
 	left:0px;
@@ -19,7 +19,7 @@
 	height: 400px;
 	display:none;
 }
-.nivoSlider a {
+.images a {
 	border:0;
 }
 

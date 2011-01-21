@@ -6,7 +6,7 @@ require File.join(File.expand_path(File.dirname(__FILE__)), "showcase", "models"
 require File.join(File.expand_path(File.dirname(__FILE__)), "showcase", "config")
 
 module Showcase
-  VERSION = '0.3'
+  VERSION = '0.4'
   
   class Application
     attr_reader :config
@@ -52,7 +52,7 @@ module Showcase
       resumes = YAML.load_file(@config.resumes_data)
       resumes.each do |lang, resume|
         @resumes[lang] = Resume.new(lang, resume['file'],
-          {:updated_at => resume['updated_at'], :title => resume['title']})
+          {:updated => resume['updated'], :title => resume['title']})
       end
       @resumes
     end
@@ -69,6 +69,7 @@ module Showcase
     def load_personal
       me = YAML.load_file(@config.personal_data)
       @me = OpenStruct.new(me)
+      @me.name = @me.first_name + " " + @me.last_name
     end
   end
 end

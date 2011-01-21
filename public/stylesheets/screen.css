@@ -278,6 +278,7 @@ ul.big-list li.projects {padding:10px;list-style-image:url(/images/projects.png)
 .contact img .me {width:140px;height:180px;margin:0 0 10px 0;}
 .contact .email {direction:rtl;unicode-bidi:bidi-override;text-align:left;}
 .contact p {margin-left:5px;}
+.contact a img.icon {margin:0px 3px 0px 0px;padding:3px;float:left;vertical-align:middle;}
 #header {margin-bottom:20px;}
 #nav ul {float:right;list-style:none;display:block;}
 #nav ul li {font-size:1.2em;float:left;padding:8px;}
@@ -301,9 +302,9 @@ ul.big-list li.projects {padding:10px;list-style-image:url(/images/projects.png)
 .nivo-controlNav a.active {font-weight:bold;}
 
 /* custom-nivo-slider.css */
-.nivoSlider {position:relative;margin:30px 0px 60px 0px;background:#202834 url(/images/nivo-slider/loading.gif) no-repeat 50% 50%;-moz-box-shadow:0px 0px 0px #333;-webkit-box-shadow:0px 0px 0px #333;box-shadow:0px 0px 0px #333;}
-.nivoSlider img {position:absolute;top:0px;left:0px;width:600px;height:400px;display:none;}
-.nivoSlider a {border:0;}
+.images {position:relative;margin:30px 0px 60px 0px;background:url(/images/nivo-slider/loading.gif) no-repeat 50% 50%;-moz-box-shadow:0px 0px 0px #333;-webkit-box-shadow:0px 0px 0px #333;box-shadow:0px 0px 0px #333;}
+.images img {position:absolute;top:0px;left:0px;width:600px;height:400px;display:none;}
+.images a {border:0;}
 .nivo-controlNav {position:absolute;left:47%;bottom:-30px;}
 .nivo-controlNav a {display:block;width:10px;height:10px;background:url(/images/nivo-slider/bullets.png) no-repeat;text-indent:-9999px;border:0;margin-right:3px;float:left;}
 .nivo-controlNav a.active {background-position:-10px 0;}
