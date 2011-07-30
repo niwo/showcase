@@ -3,7 +3,7 @@ Showcase is a simple Portfolio/Resume application for your professional web pres
 Present your resume and projects in a nice and easy way on the web.
 The application is based on Sinatra and uses YAML files as data store.
 
-Copyright © 2010, Nik Wolfgramm
+Copyright © 2011, Nik Wolfgramm
 
 ## Features ##
 - support for resume, contact details and project-portfolio
@@ -26,9 +26,9 @@ Copyright © 2010, Nik Wolfgramm
 ### copy the sample config file ###
 `cp config.example.yml config.yml`
 
-### finally let's start the show ###
+### let's start the show ###
 
-`ruby showcase.rb`
+`ruby application.rb`
 
 ## Fill in data ##
 
@@ -42,4 +42,4 @@ Edit the file __data/resumes.yml__ and add a markdown file for the resume in you
 Edit the file __data/projects.yml__
 
 ### Pictures ###
-Add your personal picture under __public/pictures/personal/__ and projetcs pictures under __public/pictures/projects/__
+Add your personal picture under __public/pictures/personal/__ and projects pictures under __public/pictures/projects/__

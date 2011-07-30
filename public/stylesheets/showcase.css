@@ -110,6 +110,11 @@ ul.big-list li.projects {
 	margin-left: 5px;
 }
 
+.contact h4.title {
+	margin-top: -15px;
+	color: #635E57;
+}
+
 .contact a img.icon {
 	margin: 0px 3px 0px 0px;
 	padding: 3px;
