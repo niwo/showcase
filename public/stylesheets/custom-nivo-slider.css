@@ -2,7 +2,6 @@
  * Note: Include the nivo-slider.css file that comes
  * with the main download before including this file.
  */
-
 .images {
 	position:relative;
 	margin:30px 0px 60px 0px;
@@ -41,7 +40,6 @@
 .nivo-controlNav a.active {
 	background-position:-10px 0;
 }
-
 .nivo-directionNav a {
 	display:block;
 	width:32px;
