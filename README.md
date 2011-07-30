@@ -12,6 +12,8 @@ Copyright © 2011, Nik Wolfgramm
 - edit your resume using markdown
 - page caching in production
 
+See a demo at http://resume.niwos.com
+
 ## Installation ##
 ### clone the showcase git project ###
 
