@@ -1,14 +1,17 @@
 # Edit this Gemfile to bundle your application's dependencies.
 source 'http://gemcutter.org'
 
-## Bundle the gems you use:
-
-## Used in production:
+## gems used in the showcase app:
 gem 'sinatra'
 gem 'haml'
 gem 'rdiscount'
 gem 'sinatra-r18n'
-gem 'rack-cache', :group => :production
+
+## Used in production:
+group :production do
+	gem 'rack-cache'
+	gem 'rack-contrib'
+end
 
 ## Bundle gems used only in certain environments:
 # gem "rspec", :group => :test

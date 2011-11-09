@@ -13,7 +13,7 @@
     .container
       #header.last
         #lang
-          %span= "#{t.showcase.language}: #{language_select(@page)}"
+          %span= language_select(@page)
         #nav
           %ul
             - menu_links(@page).each do |item|

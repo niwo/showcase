@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
 
 # Showcase: a portfolio and resume web application based on Sinatra
-# (C) 2010 Nik Wolfgramm
+# (C) 2011 Nik Wolfgramm
 
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/r18n'
 require 'rack/cache'
+require 'rack/contrib'  
 require 'haml'
 require './lib/showcase'
  
@@ -16,12 +17,16 @@ set :haml, {:format => :html5 }
 # load Showcase application settings and data
 SC = Showcase::Application.new
 
-# activate rack-cache in production
+# activate rack-cache and contrib in production
 configure :production do
   use Rack::Cache, 
-    :verbose => true, 
+    :verbose => true,
     :metastore => "file:cache/meta", 
     :entitystore => "file:cache/body"
+  use Rack::StaticCache,
+    :urls => ['/stylesheets', '/images', 'images/projects', 'images/personal', 'images/nivo-slider', '/javascripts'],
+    :root => "public",
+    :duration => 1
 end
  
 before do
