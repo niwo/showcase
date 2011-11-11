@@ -1,0 +1,15 @@
+first_name: Nik
+last_name:  Wolfgramm
+email:      nik.wolfgramm@gmail.com
+image:      /images/personal/nik.jpg
+# optional contact info
+tel:        +41 32 322 13 22
+mobile:     +41 78 740 78 87
+birthday:   1979-10-08
+address:    |
+            Mittelstrasse 18
+            2502 Biel
+            Switzerland
+title:      Dipl. Ing. Informatik FH
+web:        http://niwos.com
+linkedin:   http://www.linkedin.com/in/nikwol

@@ -1,0 +1,115 @@
+iccis:
+  name: ICCIS
+  subtitle: A Ruby on Rails web application for project management and reporting developed during the diploma thesis for PricewaterhouseCoopers
+  project_url:
+  client:
+  images:
+    - /images/projects/iccis_01.jpg
+    - /images/projects/iccis_02.jpg
+    - /images/projects/iccis_03.jpg
+  technologies:
+    - Ruby
+    - Ruby on Rails
+    - MySQL
+    - AJAX (Prototype & Scriptacalous)
+  features:
+    - associate projects, servers, contacts and credentials
+    - track project states and server updates
+    - rich, interactive user interface using Prototype/Scriptacolous
+    - task lists per project/server
+    - secure encryption of credentials
+  date: 2007-2009
+named_admin:
+  name: named-admin
+  subtitle: Ruby command line application for zone file administration on Bind DNS servers
+  project_url: http://github.com/niwo/named-admin
+  client: The Swatch Group Ltd
+  images:
+    - /images/projects/named-admin_01.png
+    - /images/projects/named-admin_02.png
+    - /images/projects/named-admin_03.jpg
+  technologies:
+    - Ruby
+    - Regular Expressions
+    - YAML
+    - optparse
+  features:
+    - zones can be inserted based on customizable zone templates
+    - find action which accepts wildcards i.e. to find all zones of a certain domain
+    - zones will be alphabetically sorted within your configuration file after each manipulation
+    - option to automatically check the zone file syntax after manipulations with named-checkconf
+    - option to ask for a named service restart after changes on the named configuration
+  date: 2009
+mysqlbuddy:
+  name: MySQL Maintenance Buddy
+  subtitle: MySQL Maintenance Buddy is a ruby command line application for automated  MySQL backups, restores and daily maintenance jobs
+  project_url: http://github.com/niwo/mysqlbuddy
+  client: Swatch Group Ltd
+  author: Nik Wolfgramm
+  images:
+    - /images/projects/mysqlmb_01.png
+    - /images/projects/mysqlmb_02.jpg
+  features:
+    - create MySQL backups using mysqldump for all or some databases
+    - restore databases from backups
+    - optimize database tables using mysqlcheck
+    - delete old database backups based on retention time
+    - collect some maintenance stats such as duration of maintenance and number of db’s backed up
+    - send a maintenance summary by email, log actions to log file
+  technologies:
+    - Ruby
+    - MySQL
+  date: 2009
+ddiadmin:
+  name: DDI Admin
+  subtitle: Web application written in C# using the ASP.NET framework to manage number blocks of big enterprise telephone systems
+  images:
+    - /images/projects/ddiadmin_01.jpg
+    - /images/projects/ddiadmin_02.jpg
+  technologies:
+    - C# and ASP.NET
+    - SQL Server 2005
+  features:
+    - assures the proper allocation and reservation of telephone number blocks
+    - assign numbers or number blocks to companies, emergency numbers, system numbers etc.
+    - manage company telephone numbers and technical contacts
+    - search functionality (who is the owner of a given number)
+  date: 2006
+next_step:
+  name: Next.Step
+  subtitle: A Ruby on Rails web application for project management and reporting developed during the diploma thesis for PricewaterhouseCoopers
+  images:
+    - /images/projects/nextstep_01.jpg
+    - /images/projects/nextstep_02.jpg
+    - /images/projects/nextstep_03.jpg
+    - /images/projects/nextstep_04.jpg
+  technologies:
+    - Ruby on Rails
+    - AJAX (Prototype & Scriptacalous)
+    - Oracle 10g
+  features:
+    - centralized management of projects, opportunities and clients
+    - reporting of work efforts per project and per employee
+    - individual, configurable views of project data
+    - integrated user guides and help system
+    - integrated full text search
+  date: 2006
+script_commander:
+  name: ScriptCommander
+  subtitle: Ruby web-application to manage web page revisions and launching common maintenance scripts
+  images:
+    - /images/projects/scriptcommander_01.jpg
+    - /images/projects/scriptcommander_02.jpg
+    - /images/projects/scriptcommander_03.jpg
+  technologies:
+    - Ruby CGI
+    - AJAX (Prototype & Scriptacolous)
+    - YAML for data and configuration files
+    - bash
+  features:
+    - runs subversion info, log and switch commands
+    - runs maintenance scripts (bash, PHP etc.)
+    - multi user support and multi project support 
+    - easy extension and configuration over YAML files
+    - all user interventions are being logged
+  date: 2008
