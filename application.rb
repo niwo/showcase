@@ -9,7 +9,7 @@ require 'sinatra/r18n'
 require 'rack/cache'
 require 'rack/contrib'  
 require 'haml'
-require './lib/showcase'
+require File.join("./lib", "showcase")
  
 # set haml fromat to html5
 set :haml, {:format => :html5 }

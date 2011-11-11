@@ -1,0 +1,5 @@
+[2011-11-12 00:15:45] INFO  WEBrick 1.3.1
+[2011-11-12 00:15:45] INFO  ruby 1.9.2 (2011-07-09) [x86_64-darwin11.0.1]
+[2011-11-12 00:15:45] INFO  WEBrick::HTTPServer#start: pid=2994 port=9292
+[2011-11-12 00:19:47] INFO  going to shutdown ...
+[2011-11-12 00:19:47] INFO  WEBrick::HTTPServer#start done.

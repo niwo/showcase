@@ -2,8 +2,8 @@ require 'yaml'
 require 'ostruct'
 
 # require local showcase dependencies
-require File.join("showcase", "models")
-require File.join("showcase", "config")
+require File.join("./lib", "showcase", "models")
+require File.join("./lib", "showcase", "config")
 
 module Showcase
   VERSION = '0.6'
