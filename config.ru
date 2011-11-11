@@ -1,4 +1,4 @@
-require 'application'
+require './application'
 
 log = File.new("log/showcase.log", "a")
 $stdout.reopen(log)
