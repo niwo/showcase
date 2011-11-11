@@ -40,7 +40,7 @@ module Showcase
     private
     
     def config_file
-      File.join(File.dirname(__FILE__), *%w[.. .. config config.yml])
+      File.join(*%w[config config.yml])
     end
   end
 end
