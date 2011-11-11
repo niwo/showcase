@@ -3,11 +3,7 @@
 tmp/**/*
 cache/*
 config/deploy.rb
-config/config.yml
 Capfile
-data/*
-!data/*.example.*
-public/images/projects/*
-!public/images/projects/*.example.*
-public/images/personal/*
-!public/images/personal/*.example.*
+data/*.example.*
+public/images/projects/*.example.*
+public/images/personal/*.example.*
