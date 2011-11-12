@@ -1,6 +1,7 @@
 .bundle
 .DS_Store
 tmp/**/*
+log/*
 cache/*
 config/deploy.rb
 Capfile
