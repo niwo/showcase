@@ -301,7 +301,7 @@ ul.big-list li a:hover {border-bottom:1px solid #B7B2AB;background-color:white;}
 #nav, #nav a {color:#635E57;padding-bottom:2px;text-decoration:none;text-transform:uppercase;}
 #nav .current, #nav ul li a:hover {border-bottom:1px solid #B7B2AB;background-color:white;}
 #lang {color:#635E57;float:left;margin-top:8px;}
-.right {text-align:right;}
+.right {text-align:right;float:none !important;}
 a {color:black;}
 a:hover {background-color:#FF3030;color:white;}
 

@@ -199,11 +199,10 @@ ul.big-list li a:hover {
 	margin-top: 8px;
 }
 
-
-
 /* General */
 .right {
 	text-align: right;
+	float: none !important;
 }
 
 a {
