@@ -303,7 +303,7 @@ ul.big-list li a:hover {border-bottom:1px solid #B7B2AB;background-color:white;}
 #lang {color:#635E57;float:left;margin-top:8px;}
 .right {text-align:right;float:none !important;}
 a {color:black;}
-a:hover {background-color:#FF3030;color:white;}
+a:hover {background-color:black;color:white;}
 
 /* nivo-slider.css */
 .nivoSlider {position:relative;}
