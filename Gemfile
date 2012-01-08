@@ -13,6 +13,11 @@ group :production do
 	gem 'rack-contrib'
 end
 
+## Used in development:
+group :development do
+	gem 'shotgun'
+end
+
 ## Bundle gems used only in certain environments:
 # gem "rspec", :group => :test
 # group :test do

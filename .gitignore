@@ -8,3 +8,4 @@ Capfile
 data/*.example.*
 public/images/projects/*.example.*
 public/images/personal/*.example.*
+public/stylesheets/src/

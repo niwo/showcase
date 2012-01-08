@@ -30,7 +30,7 @@
 ## Praktikum als Informatiker, STAAR Surgical, Nidau, 2003 ##
 * Einführungen einer Software zur Verwaltung der Messinstrumente und der Sicherstellung der Qualitätssicherung
 
-# Bildung #
+# Ausbildung #
 * Informatik-Ingenieur FH (Softwareentwicklung), HTI Biel – Hochschule für Technik und Informatik Biel, 2002-2006
 * Technische Berufsmaturität, Gewerblich-Industrielle Berufsschule Bern, 1996-2000
 * Feinmechaniker, Ernst Roser AG Bern, 1996-2000

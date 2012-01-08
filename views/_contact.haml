@@ -15,18 +15,24 @@
     %p
       = @me.tel
       %br
-      = @me.mobile
-  - if @me.email
-    %h3= t.contact.mail
-    %p
-      %a{:href => "mailto:#{obscure_email(@me.email)}"} 
-        %span.email= @me.email.reverse
-  - if @me.web
-    %h3= t.contact.web
-    %p
-      %a{:href => @me.web}= @me.web
-  - if @me.linkedin
-    %a{:href => @me.linkedin}
-      %img.icon{:src => '/images/linkedin.png', :alt => 'View my profile on LinkedIn'}
-  %a{:href => "/vcard.vcf", :alt => t.contact.vcf}
-    %img.icon{:src => '/images/vcard.png', :alt => t.contact.vcf, :title => t.contact.vcf}
+      = @me.mobile 
+  %ul
+    - if @me.email
+      %li
+        %a{:href => "mailto:#{obscure_email(@me.email)}"}
+          %img.icon{:src => '/images/mail.png'}
+          = t.contact.mail
+    - if @me.web
+      %li
+        %a{:href => @me.web}
+          %img.icon{:src => '/images/globe.png'}
+          = t.contact.web
+    - if @me.linkedin
+      %li
+        %a{:href => @me.linkedin}
+          %img.icon{:src => '/images/linkedin.png'}
+          linkedin
+    %li
+      %a{:href => "/vcard.vcf", :alt => t.contact.vcf}
+        %img.icon{:src => '/images/vcard.png'}
+        vcard
