@@ -25,15 +25,15 @@
         </a>
     - if @me.web
       %li
-        %a{:href => @me.web}
+        %a{:href => @me.web, :target => "_blank"}
           %img.icon{:src => '/images/globe.png'}
           = t.contact.web
     - if @me.linkedin
       %li
-        %a{:href => @me.linkedin}
+        %a{:href => @me.linkedin, :target => "_blank"}
           %img.icon{:src => '/images/linkedin.png'}
           linkedin
     %li
-      %a{:href => "/vcard.vcf", :alt => t.contact.vcf}
+      %a{:href => "/vcard.vcf"}
         %img.icon{:src => '/images/vcard.png'}
         vcard
