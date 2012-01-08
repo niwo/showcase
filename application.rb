@@ -58,8 +58,9 @@ helpers do
     text.gsub("\n", "<br />")
   end
   
+  # convert characters to html entities
   def obscure_email(email)
-    return nil if email.nil?
+    return nil if email.nil? #Don't bother if the parameter is nil.
     lower = ('a'..'z').to_a
     upper = ('A'..'Z').to_a
     email.split('').map { |char|

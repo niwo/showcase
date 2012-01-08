@@ -19,9 +19,10 @@
   %ul
     - if @me.email
       %li
-        %a{:href => "mailto:#{obscure_email(@me.email)}"}
-          %img.icon{:src => '/images/mail.png'}
-          = t.contact.mail
+        <a href="mailto:#{obscure_email(@me.email)}">
+        = t.contact.mail
+        %img.icon{:src => '/images/mail.png'}
+        </a>
     - if @me.web
       %li
         %a{:href => @me.web}
