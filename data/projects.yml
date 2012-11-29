@@ -1,3 +1,22 @@
+infrabrain:
+  name: Infrabrain
+  subtitle: A Ruby on Rails web application for infrastructure reporting and billing
+  project_url:
+  client: SWISS TXT
+  images:
+    - /images/projects/infrabrain_00.jpg
+    - /images/projects/infrabrain_01.jpg
+    - /images/projects/infrabrain_02.jpg
+  technologies:
+    - Ruby
+    - Ruby on Rails
+    - MongoDB
+  features:
+    - "collect daily probes of the folowing systems: EMC storage and Backup, VMware vSphere, Cloudstack"
+    - generate monthly usage reports per client
+    - role based access for clients and administrators
+    - rich, interactive user interface using jQuery
+  date: 2012
 iccis:
   name: ICCIS
   subtitle: A Ruby on Rails web application for project management and reporting developed during the diploma thesis for PricewaterhouseCoopers
