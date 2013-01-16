@@ -3,8 +3,6 @@ Showcase is a simple Portfolio/Resume application for your professional web pres
 Present your resume and projects in a nice and easy way on the web.
 The application is based on Sinatra and uses YAML files as data store.
 
-Copyright © 2011, Nik Wolfgramm
-
 ## Features ##
 - support for resume, contact details and project-portfolio
 - multi language support
@@ -34,14 +32,10 @@ See a demo at http://resume.niwos.com
 
 ## Fill in data ##
 
-### Personal ###
-Edit the file __data/personal.yml__
-
-### Resume ###
-Edit the file __data/resumes.yml__ and add a markdown file for the resume in your language(s), i.e. __data/resume.en.md__
-
-### Projects ###
-Edit the file __data/projects.yml__
+copy all data example files to the personal folder and âdapt them to your needs  `cp -r data/example data/personal`
 
 ### Pictures ###
 Add your personal picture under __public/pictures/personal/__ and projects pictures under __public/pictures/projects/__
+
+____
+Copyright © 213, Nik Wolfgramm
