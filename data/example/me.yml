@@ -1,0 +1,18 @@
+first_name: John
+last_name:  Doe
+email:      john.doe@doemail.com
+image:      http://lorempixel.com/g/130/175/people/
+# add your own image locally
+#image:      /images/personal/me.jpg
+
+# optional contact info
+tel:        +41 22 333 22 11
+mobile:     +41 33 444 55 66
+birthday:   1979-10-10
+address:    |
+            Street 8
+            25022 Town
+            Mycountry
+title:      Dipl. Ing. Science
+web:        http://google.com
+linkedin:   http://www.linkedin.com/in/johndoe

@@ -1,0 +1,32 @@
+infrabrain:
+  name: Showcase
+  subtitle: Showcase is a simple Portfolio/Resume application for your professional web presence
+  project_url: https://github.com/niwo/showcase
+  client:
+  images:
+    - /images/projects/examples/showcase_01.jpeg
+    - /images/projects/examples/showcase_03.jpeg
+  technologies:
+    - Ruby
+    - Sinatra
+  features:
+    - multi language support
+    - "simple setup, plain files and Ruby - no database required"
+  date: 2010-2013
+iccis:
+  name: Example Project
+  subtitle: My awesome project
+  project_url:
+  client: Clientname 
+  images:
+    - http://lorempixel.com/600/400/technics/
+    - http://lorempixel.com/600/400/technics/
+    - http://lorempixel.com/600/400/technics/
+  technologies:
+    - Pascal
+    - Binary Files
+    - Magic
+  features:
+    - makes live easier
+    - and fun
+  date: 2013

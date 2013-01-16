@@ -1,15 +1,5 @@
 # Showcase base configuration
 
-# usually you dont need to change those values
-data_folder:
-    data
-resumes_data:
-    resumes.yml
-projects_data:
-    projects.yml
-personal_data:
-    me.yml
-
 # adapt those values to your needs
 description:  Showcase - the portfolio and resume application
 keywords:     resume, portfolio, projects
@@ -21,3 +11,11 @@ languages:
 
 # change this if you have Google Analytics
 google_analytics_code: UA-15774346-1
+
+# usually you dont need to change those values
+resumes_data:
+    resumes.yml
+projects_data:
+    projects.yml
+personal_data:
+    me.yml

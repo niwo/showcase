@@ -29,7 +29,7 @@ module Showcase
     end
     
     def data_folder
-      @config['data_folder']
+      File.directory?("data/personal") ? "data/personal" : "data/example"
     end
     
     def google_analytics_code

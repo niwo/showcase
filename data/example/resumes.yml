@@ -1,0 +1,8 @@
+en:
+  title:   John Doe's Resume
+  file:    data/example/resume.en.md
+  updated: 2013-01-16
+de:
+  title:   John Doe's Resumé
+  file:    data/example/resume.de.md
+  updated: 2013-01-16

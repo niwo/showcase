@@ -6,7 +6,7 @@ require File.join("./lib", "showcase", "models")
 require File.join("./lib", "showcase", "config")
 
 module Showcase
-  VERSION = '0.7'
+  VERSION = '0.8'
   
   class Application
     attr_reader :config

@@ -5,7 +5,4 @@ log/*
 cache/*
 config/deploy.rb
 Capfile
-data/*.example.*
-public/images/projects/*.example.*
-public/images/personal/*.example.*
-public/stylesheets/src/
+data/personal/*
