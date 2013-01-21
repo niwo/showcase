@@ -32,7 +32,7 @@ See a demo at http://resume.niwos.com
 
 ## Fill in data ##
 
-copy all data example files to the personal folder and âdapt them to your needs  `cp -r data/example data/personal`
+copy all data example files to the personal folder and adapt them to your needs  `cp -r data/example data/personal`
 
 ### Pictures ###
 Add your personal picture under __public/pictures/personal/__ and projects pictures under __public/pictures/projects/__
@@ -40,4 +40,5 @@ Add your personal picture under __public/pictures/personal/__ and projects pictu
 
 
 ____
-Copyright © 013, Nik Wolfgramm
+Copyright (C) 2013, Nik Wolfgramm
+
