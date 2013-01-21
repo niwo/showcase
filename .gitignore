@@ -1,8 +1,13 @@
 .bundle
 .DS_Store
 tmp/**/*
-log/*
 cache/*
+log/*
 config/deploy.rb
+config/config.yml
 Capfile
+data/*.*
 data/personal/*
+public/images/projects/*.*
+public/images/personal/*.*
+public/google*
