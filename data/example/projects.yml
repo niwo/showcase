@@ -13,7 +13,7 @@ infrabrain:
     - multi language support
     - "simple setup, plain files and Ruby - no database required"
   date: 2010-2013
-iccis:
+example1:
   name: Example Project
   subtitle: My awesome project
   project_url:
