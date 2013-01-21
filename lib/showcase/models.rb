@@ -7,15 +7,15 @@ module Showcase
     attr_reader :title
     attr_reader :updated
   
-    def initialize(lang, file, opts = {})
+    def initialize(lang, path, opts = {})
       @lang = lang 
-      @file = file || "/data/resume.#{lang}.md"
+      @file = "#{path}/resume.#{lang}.md"
       @updated = opts[:updated] || Time.now
       @title = opts[:title] || nil
     end
   
     def content
-      RDiscount.new(File.open(@file).read).to_html rescue "<p>#{@file} not found or empty</p>"
+      RDiscount.new(File.open(@file).read).to_html.force_encoding('UTF-8') rescue "<p>#{@file} not found or empty</p>"
     end
   end
   

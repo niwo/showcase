@@ -23,3 +23,5 @@ end
 # group :test do
 #   gem "webrat"
 # end
+
+gem 'puma'

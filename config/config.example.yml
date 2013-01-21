@@ -1,7 +1,6 @@
 # Showcase base configuration
 
 # usually you dont need to change those values
-data_folder:    data
 resumes_data:   resumes.yml
 projects_data:  projects.yml
 personal_data:  me.yml

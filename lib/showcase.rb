@@ -51,7 +51,7 @@ module Showcase
     def load_resumes
       resumes = YAML.load_file(@config.resumes_data)
       resumes.each do |lang, resume|
-        @resumes[lang] = Resume.new(lang, resume['file'],
+        @resumes[lang] = Resume.new(lang, @config.data_folder,
           {:updated => resume['updated'], :title => resume['title']})
       end
       @resumes
