@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # Showcase: a portfolio and resume web application based on Sinatra
-# (C) 2011 Nik Wolfgramm
+# (C) 2011 - 2013 Nik Wolfgramm
 
 require 'rubygems'
 require 'sinatra'
@@ -24,7 +24,7 @@ configure :production do
     :metastore => "file:cache/meta", 
     :entitystore => "file:cache/body"
   use Rack::StaticCache,
-    :urls => ['/stylesheets', '/images', 'images/projects', 'images/personal', 'images/nivo-slider', '/javascripts'],
+    :urls => %w(/stylesheets /images /javascripts'),
     :root => "public",
     :duration => 1
 end
@@ -36,22 +36,19 @@ end
 
 helpers do  
   def language_select(page_name)
-    lang_sel = ""    
-    r18n.available_locales.each do |locale|
+    r18n.available_locales.map do |locale|
       if SC.config.languages.include? locale.code
-        lang_sel += r18n.locale.code == locale.code ? locale.title : "<a href='/#{locale.code}#{SC.page(page_name).path}'>#{locale.title}</a>"
-        lang_sel += " | " unless( locale.code == r18n.available_locales.last.code)
+        r18n.locale.code == locale.code ? locale.title :
+            "<a href='/#{locale.code}#{SC.page(page_name).path}'>#{locale.title}</a>"
       end
-    end
-    lang_sel
+    end.join(" | ")
   end
   
   def menu_links(page_name)
-    menu = []
-    SC.pages.each do |page|
-      menu << (page.name == page_name ? "<span class='current'>#{t.showcase.send(page.name)}</span>" : "<a href='/#{r18n.locale.code}#{page.path}'>#{t.showcase.send(page.name)}</a>")
+    SC.pages.map do |page|
+      page.name == page_name ? "<span class='current'>#{t.showcase.send(page.name)}</span>" :
+        "<a href='/#{r18n.locale.code}#{page.path}'>#{t.showcase.send(page.name)}</a>"
     end
-    menu
   end
   
   def text_with_line_breaks(text)
@@ -60,7 +57,7 @@ helpers do
   
   # convert characters to html entities
   def obscure_email(email)
-    return nil if email.nil? #Don't bother if the parameter is nil.
+    return nil if email.nil? # exit if the parameter is nil
     lower = ('a'..'z').to_a
     upper = ('A'..'Z').to_a
     email.split('').map { |char|
