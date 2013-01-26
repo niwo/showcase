@@ -40,5 +40,5 @@ Add your personal picture under __public/pictures/personal/__ and projects pictu
 
 
 ____
-Copyright (C) 2013, Nik Wolfgramm
+Copyright (C) 2011-2013, Nik Wolfgramm
 
