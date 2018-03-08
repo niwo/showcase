@@ -36,8 +36,3 @@ copy all data example files to the personal folder and adapt them to your needs 
 
 ### Pictures ###
 Add your personal picture under __public/pictures/personal/__ and projects pictures under __public/pictures/projects/__
-
-
-
-____
-Copyright (C) 2011-2013, Nik Wolfgramm
