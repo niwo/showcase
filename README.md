@@ -24,11 +24,11 @@ See a demo at http://resume.niwos.com
 `bundle install`
 
 ### copy the sample config file ###
-`cp config.example.yml config.yml`
+`cp config/config.example.yml config/config.yml`
 
 ### let's start the show ###
 
-`ruby application.rb`
+`bundle exec rackup`
 
 ## Fill in data ##
 
@@ -41,4 +41,3 @@ Add your personal picture under __public/pictures/personal/__ and projects pictu
 
 ____
 Copyright (C) 2011-2013, Nik Wolfgramm
-

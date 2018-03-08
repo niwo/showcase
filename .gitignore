@@ -2,7 +2,6 @@
 .DS_Store
 tmp/**/*
 cache/*
-log/*
 config/deploy.rb
 config/config.yml
 Capfile
