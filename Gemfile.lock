@@ -5,7 +5,7 @@ GEM
       temple (>= 0.8.0)
       tilt
     mustermann (1.0.3)
-    puma (3.12.3)
+    puma (3.12.4)
     r18n-core (3.2.0)
     rack (2.0.8)
     rack-cache (1.8.0)
